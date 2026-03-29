@@ -1,1 +1,1205 @@
+<!DOCTYPE html>
 
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ドコモ店内研修教材｜2026年3月29日版</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red: #E60033;
+  --red-dark: #C4002B;
+  --red-light: #FFF0F3;
+  --gold: #B8860B;
+  --gold-light: #FFF8E7;
+  --blue: #0068B7;
+  --blue-light: #EBF5FF;
+  --green: #00A960;
+  --green-light: #EEFFF5;
+  --orange: #FF6600;
+  --orange-light: #FFF4EB;
+  --purple: #6B3FA0;
+  --purple-light: #F5EEFF;
+  --gray-50: #FAFAFA;
+  --gray-100: #F5F5F5;
+  --gray-200: #E8E8E8;
+  --gray-300: #D0D0D0;
+  --gray-600: #666;
+  --gray-800: #333;
+  --gray-900: #1A1A1A;
+  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+  --radius: 12px;
+}
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+font-family: ‘Noto Sans JP’, sans-serif;
+background: var(–gray-50);
+color: var(–gray-800);
+line-height: 1.7;
+font-size: 15px;
+}
+
+/* ===== HEADER ===== */
+.header {
+background: linear-gradient(135deg, var(–red) 0%, var(–red-dark) 100%);
+color: #fff;
+padding: 20px 24px;
+position: sticky;
+top: 0;
+z-index: 100;
+box-shadow: 0 4px 20px rgba(230,0,51,0.3);
+}
+.header-inner {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 8px;
+}
+.header h1 {
+font-family: ‘M PLUS Rounded 1c’, sans-serif;
+font-size: 22px;
+font-weight: 800;
+letter-spacing: 1px;
+}
+.header .date-badge {
+background: rgba(255,255,255,0.2);
+padding: 4px 14px;
+border-radius: 20px;
+font-size: 13px;
+font-weight: 500;
+backdrop-filter: blur(4px);
+}
+
+/* ===== TAB NAV ===== */
+.tab-nav {
+background: #fff;
+border-bottom: 1px solid var(–gray-200);
+position: sticky;
+top: 68px;
+z-index: 99;
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+scrollbar-width: none;
+}
+.tab-nav::-webkit-scrollbar { display: none; }
+.tab-nav-inner {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+gap: 0;
+min-width: max-content;
+}
+.tab-btn {
+padding: 14px 20px;
+border: none;
+background: none;
+font-family: ‘Noto Sans JP’, sans-serif;
+font-size: 13px;
+font-weight: 500;
+color: var(–gray-600);
+cursor: pointer;
+white-space: nowrap;
+border-bottom: 3px solid transparent;
+transition: all 0.2s;
+}
+.tab-btn:hover { color: var(–red); background: var(–red-light); }
+.tab-btn.active {
+color: var(–red);
+border-bottom-color: var(–red);
+font-weight: 700;
+}
+
+/* ===== CONTENT ===== */
+.content {
+max-width: 1200px;
+margin: 0 auto;
+padding: 24px;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ===== COMMON COMPONENTS ===== */
+.section-title {
+font-family: ‘M PLUS Rounded 1c’, sans-serif;
+font-size: 20px;
+font-weight: 800;
+margin: 32px 0 16px;
+padding-left: 16px;
+border-left: 5px solid var(–red);
+line-height: 1.4;
+}
+.section-title:first-child { margin-top: 0; }
+
+.card {
+background: #fff;
+border-radius: var(–radius);
+box-shadow: var(–shadow);
+padding: 24px;
+margin-bottom: 20px;
+}
+.card-accent {
+border-top: 4px solid var(–red);
+}
+
+/* Tables */
+.price-table {
+width: 100%;
+border-collapse: collapse;
+margin: 12px 0;
+font-size: 14px;
+}
+.price-table th {
+background: var(–gray-900);
+color: #fff;
+padding: 10px 12px;
+text-align: left;
+font-weight: 700;
+font-size: 13px;
+}
+.price-table td {
+padding: 10px 12px;
+border-bottom: 1px solid var(–gray-200);
+}
+.price-table tr:nth-child(even) td { background: var(–gray-50); }
+.price-table .highlight { color: var(–red); font-weight: 700; }
+.price-table .small { font-size: 11px; color: var(–gray-600); display: block; }
+.price-table .price-big {
+font-size: 20px;
+font-weight: 900;
+font-family: ‘M PLUS Rounded 1c’, sans-serif;
+}
+
+/* Talk Script */
+.talk-box {
+background: var(–blue-light);
+border-radius: var(–radius);
+padding: 20px;
+margin: 16px 0;
+border-left: 5px solid var(–blue);
+}
+.talk-box.customer {
+background: var(–orange-light);
+border-left-color: var(–orange);
+}
+.talk-box .label {
+font-size: 12px;
+font-weight: 700;
+text-transform: uppercase;
+margin-bottom: 6px;
+letter-spacing: 1px;
+}
+.talk-box .label.staff { color: var(–blue); }
+.talk-box .label.customer-label { color: var(–orange); }
+.talk-box p { font-size: 14px; line-height: 1.8; }
+.talk-box .point {
+background: #fff;
+border-radius: 8px;
+padding: 10px 14px;
+margin-top: 10px;
+font-size: 13px;
+color: var(–gray-600);
+border: 1px dashed var(–gray-300);
+}
+.talk-box .point::before {
+content: “💡 ポイント：”;
+font-weight: 700;
+color: var(–gold);
+}
+
+/* Flow */
+.flow-step {
+display: flex;
+gap: 16px;
+margin: 16px 0;
+align-items: flex-start;
+}
+.flow-num {
+width: 40px;
+height: 40px;
+min-width: 40px;
+background: var(–red);
+color: #fff;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 900;
+font-size: 16px;
+font-family: ‘M PLUS Rounded 1c’, sans-serif;
+}
+.flow-content h4 {
+font-size: 16px;
+font-weight: 700;
+margin-bottom: 4px;
+}
+.flow-content p { font-size: 14px; color: var(–gray-600); }
+
+/* Badge */
+.badge {
+display: inline-block;
+padding: 2px 10px;
+border-radius: 12px;
+font-size: 11px;
+font-weight: 700;
+margin: 0 4px 4px 0;
+}
+.badge-red { background: var(–red-light); color: var(–red); }
+.badge-blue { background: var(–blue-light); color: var(–blue); }
+.badge-green { background: var(–green-light); color: var(–green); }
+.badge-gold { background: var(–gold-light); color: var(–gold); }
+.badge-purple { background: var(–purple-light); color: var(–purple); }
+.badge-orange { background: var(–orange-light); color: var(–orange); }
+
+/* Checklist */
+.checklist { list-style: none; padding: 0; }
+.checklist li {
+padding: 8px 0 8px 28px;
+position: relative;
+font-size: 14px;
+border-bottom: 1px solid var(–gray-100);
+}
+.checklist li::before {
+content: “✓”;
+position: absolute;
+left: 0;
+color: var(–green);
+font-weight: 900;
+font-size: 16px;
+}
+
+/* Roleplay */
+.roleplay {
+background: linear-gradient(135deg, #FFFDF5 0%, #FFF8E7 100%);
+border: 2px solid var(–gold);
+border-radius: var(–radius);
+padding: 20px;
+margin: 16px 0;
+}
+.roleplay h4 {
+color: var(–gold);
+font-size: 14px;
+font-weight: 700;
+margin-bottom: 12px;
+}
+.roleplay .scenario {
+background: #fff;
+border-radius: 8px;
+padding: 14px;
+margin-bottom: 12px;
+border: 1px solid #EDD;
+font-size: 13px;
+}
+
+/* Grid for summary */
+.grid-2 {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
+@media (max-width: 768px) {
+.grid-2 { grid-template-columns: 1fr; }
+.header h1 { font-size: 18px; }
+.tab-btn { padding: 12px 14px; font-size: 12px; }
+.content { padding: 16px; }
+.price-table { font-size: 12px; }
+.price-table .price-big { font-size: 16px; }
+}
+
+/* Connector arrow between talk boxes */
+.arrow-down {
+text-align: center;
+font-size: 24px;
+color: var(–gray-300);
+margin: 4px 0;
+}
+
+/* Highlight box */
+.highlight-box {
+background: var(–red-light);
+border: 2px solid var(–red);
+border-radius: var(–radius);
+padding: 16px 20px;
+margin: 16px 0;
+font-size: 14px;
+}
+.highlight-box strong { color: var(–red); }
+
+/* Print support */
+@media print {
+.header, .tab-nav { position: static; }
+.tab-panel { display: block !important; page-break-before: always; }
+}
+</style>
+
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <h1>📱 ドコモ店内研修教材</h1>
+    <span class="date-badge">2026年3月29日版 ｜ オンライン研修用</span>
+  </div>
+</div>
+
+<nav class="tab-nav">
+  <div class="tab-nav-inner">
+    <button class="tab-btn active" data-tab="overview">📋 一覧表</button>
+    <button class="tab-btn" data-tab="flow">🔄 提案フロー</button>
+    <button class="tab-btn" data-tab="plan">📱 料金プラン</button>
+    <button class="tab-btn" data-tab="hikari">🌐 ドコモ光</button>
+    <button class="tab-btn" data-tab="denki">⚡ でんき・ガス</button>
+    <button class="tab-btn" data-tab="dcard">💳 dカード</button>
+    <button class="tab-btn" data-tab="hoken">🛡️ 補償・保険</button>
+    <button class="tab-btn" data-tab="roleplay">🎭 ロープレ台本</button>
+  </div>
+</nav>
+
+<div class="content">
+
+<!-- ========== 一覧表 ========== -->
+
+<div class="tab-panel active" id="overview">
+  <h2 class="section-title">全商品サマリー（店内提案6カテゴリ）</h2>
+  <div class="card">
+    <p style="font-size:14px; color:var(--gray-600); margin-bottom:16px;">お客様の生活全体をドコモで一括管理→割引最大化＋dポイント大量還元がゴール。全商品をまとめることで<strong style="color:var(--red);">月額最大3,300円以上の割引＋ポイント還元</strong>が実現できます。</p>
+
+```
+<table class="price-table">
+  <thead>
+    <tr>
+      <th style="width:20%">カテゴリ</th>
+      <th style="width:25%">商品名</th>
+      <th style="width:25%">月額（税込）</th>
+      <th style="width:30%">主なセールスポイント</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="5"><span class="badge badge-red">料金プラン</span></td>
+      <td><strong>ドコモ MAX</strong></td>
+      <td>5,698円〜8,448円<span class="small">データ量に応じた3段階制</span></td>
+      <td>データ無制限＋DAZN見放題＋海外30GB無料</td>
+    </tr>
+    <tr>
+      <td><strong>ドコモ ポイ活 MAX</strong></td>
+      <td>11,748円<span class="small">ポイ活で実質6,748円〜</span></td>
+      <td>最大5,000pt/月獲得可能で実質最安に</td>
+    </tr>
+    <tr>
+      <td><strong>ドコモ ポイ活 20</strong></td>
+      <td>中容量20GB向け</td>
+      <td>ポイ活を気軽に始められる</td>
+    </tr>
+    <tr>
+      <td><strong>ドコモ mini</strong></td>
+      <td>4GB: 低価格<br>10GB: 中価格</td>
+      <td>小容量で月額を抑えたい方向け</td>
+    </tr>
+    <tr>
+      <td><strong>ahamo</strong></td>
+      <td>2,970円（30GB）</td>
+      <td>オンライン専用・5分通話無料付き</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-blue">光回線</span></td>
+      <td><strong>ドコモ光 1ギガ</strong></td>
+      <td>戸建: 5,720円〜<br>マンション: 4,400円〜<span class="small">タイプA・2年定期</span></td>
+      <td>スマホセット割▲1,210円/回線</td>
+    </tr>
+    <tr>
+      <td rowspan="2"><span class="badge badge-green">電気・ガス</span></td>
+      <td><strong>ドコモでんき</strong></td>
+      <td>各地域電力と同額〜<span class="small">Green: +500円</span></td>
+      <td>でんきセット割▲110円＋dポイント還元</td>
+    </tr>
+    <tr>
+      <td><strong>ドコモ ガス</strong></td>
+      <td>地域ガス会社と同額</td>
+      <td>でんきと併用で電気還元率+2%UP</td>
+    </tr>
+    <tr>
+      <td rowspan="4"><span class="badge badge-gold">dカード</span></td>
+      <td><strong>dカード</strong></td>
+      <td>年会費無料</td>
+      <td>基本1%還元・dカードお支払割▲220円</td>
+    </tr>
+    <tr>
+      <td><strong>dカード GOLD U</strong></td>
+      <td>年会費3,300円<span class="small">条件達成で実質無料</span></td>
+      <td>ドコモ料金5%還元・若者向け</td>
+    </tr>
+    <tr>
+      <td><strong>dカード GOLD</strong></td>
+      <td>年会費11,000円</td>
+      <td>ドコモ料金10%還元・ケータイ補償最大12万円</td>
+    </tr>
+    <tr>
+      <td><strong>dカード PLATINUM</strong></td>
+      <td>年会費29,700円</td>
+      <td>ドコモ料金最大20%還元・プライオリティパス</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-purple">補償</span></td>
+      <td><strong>smartあんしん補償</strong></td>
+      <td>330円〜1,100円/月<span class="small">機種により異なる</span></td>
+      <td>故障・紛失交換＋イエナカ機器＋不正決済補償</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+  </div>
+
+  <h2 class="section-title">割引の全体像（セット割まとめ）</h2>
+  <div class="card">
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>割引名</th>
+          <th>割引額/月（税込）</th>
+          <th>条件</th>
+          <th>対象プラン</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>みんなドコモ割</strong></td>
+          <td>2回線: ▲550円<br><span class="highlight">3回線以上: ▲1,210円</span></td>
+          <td>ファミリー割引グループの回線数</td>
+          <td>MAX / ポイ活MAX</td>
+        </tr>
+        <tr>
+          <td><strong>ドコモ光セット割</strong></td>
+          <td class="highlight">▲1,210円</td>
+          <td>ファミリー割引グループ内にドコモ光契約</td>
+          <td>MAX / ポイ活MAX / ポイ活20 / mini</td>
+        </tr>
+        <tr>
+          <td><strong>home 5Gセット割</strong></td>
+          <td class="highlight">▲1,210円</td>
+          <td>ファミリー割引グループ内にhome 5G契約</td>
+          <td>MAX / ポイ活MAX / ポイ活20 / mini</td>
+        </tr>
+        <tr>
+          <td><strong>ドコモでんきセット割</strong></td>
+          <td>▲110円</td>
+          <td>ファミリー割引グループ内にドコモでんき契約</td>
+          <td>MAX / ポイ活MAX / ポイ活20 / mini</td>
+        </tr>
+        <tr>
+          <td><strong>dカードお支払割</strong></td>
+          <td>dカード: ▲220円<br><span class="highlight">GOLD/PLATINUM: ▲550円</span></td>
+          <td>dカードで携帯料金を定期払い</td>
+          <td>MAX / ポイ活MAX / ポイ活20 / mini</td>
+        </tr>
+        <tr>
+          <td><strong>長期利用割</strong></td>
+          <td>10年以上: ▲110円<br>20年以上: ▲220円</td>
+          <td>ドコモ利用継続年数</td>
+          <td>MAX / ポイ活MAX</td>
+        </tr>
+      </tbody>
+    </table>
+
+```
+<div class="highlight-box">
+  <strong>💰 割引フル適用時の例（ドコモ MAX 3GB超〜無制限）</strong><br>
+  基本料 8,448円 − みんなドコモ割1,210円 − ドコモ光セット割1,210円 − でんきセット割110円 − dカードお支払割（GOLD）550円 − 長期利用割（20年）220円<br>
+  ＝ <span style="font-size:20px; font-weight:900; color:var(--red);">月額 5,148円</span>（税込）でデータ無制限＋DAZN見放題！
+</div>
+```
+
+  </div>
+</div>
+
+<!-- ========== 提案フロー ========== -->
+
+<div class="tab-panel" id="flow">
+  <h2 class="section-title">提案フロー全体像（ヒアリング→提案→クロージング）</h2>
+
+  <div class="card card-accent">
+    <h3 style="font-size:16px; font-weight:700; margin-bottom:16px;">🎯 店内提案の基本方針</h3>
+    <p style="font-size:14px; margin-bottom:12px;">来店目的（機種変更・プラン相談等）を起点に、生活全体のドコモ化を提案する。<br>
+    キーワードは<strong style="color:var(--red);">「まとめるほどおトク」</strong>。個別商品の押し売りではなく、<strong>お客様のライフスタイルに合わせた最適提案</strong>を行う。</p>
+  </div>
+
+  <div class="flow-step">
+    <div class="flow-num">1</div>
+    <div class="flow-content">
+      <h4>🤝 アイスブレイク・来店目的の確認（1〜2分）</h4>
+      <p>「本日はどのようなご用件でいらっしゃいましたか？」<br>来店目的を確認しつつ、お客様の緊張をほぐす。</p>
+    </div>
+  </div>
+
+  <div class="flow-step">
+    <div class="flow-num">2</div>
+    <div class="flow-content">
+      <h4>🔍 ヒアリング（5〜10分）── 5つの必須確認項目</h4>
+      <p>以下の情報を自然な会話の中で引き出す。</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-left:56px;">
+    <ul class="checklist">
+      <li><strong>現在のプラン・月額</strong>「今のご利用料金は月々おいくらくらいですか？」</li>
+      <li><strong>データ利用量</strong>「毎月どのくらいギガを使われていますか？動画はよく見られますか？」</li>
+      <li><strong>家族構成・回線数</strong>「ご家族でドコモをお使いの方はいらっしゃいますか？」</li>
+      <li><strong>ご自宅のネット環境</strong>「ご自宅のインターネットはどちらをお使いですか？」</li>
+      <li><strong>支払い方法</strong>「携帯料金のお支払いはクレジットカードですか？dカードはお持ちですか？」</li>
+    </ul>
+  </div>
+
+  <div class="flow-step">
+    <div class="flow-num">3</div>
+    <div class="flow-content">
+      <h4>💡 深掘りヒアリング（3〜5分）── クロスセルの種を探す</h4>
+      <p>電気・ガス・保険ニーズを探る追加質問。</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-left:56px;">
+    <ul class="checklist">
+      <li><strong>電気・ガス</strong>「ちなみに、電気やガスの会社はどちらをお使いですか？ドコモでまとめるとポイントが貯まるんですよ」</li>
+      <li><strong>スマホの不安</strong>「今のスマホ、落としたりしたときの補償は入ってますか？」</li>
+      <li><strong>ポイント活用</strong>「dポイントは普段使われていますか？」</li>
+      <li><strong>エンタメ利用</strong>「スポーツ観戦やAmazonプライムはご利用されますか？」</li>
+    </ul>
+  </div>
+
+  <div class="flow-step">
+    <div class="flow-num">4</div>
+    <div class="flow-content">
+      <h4>📊 提案（5〜10分）── お客様専用のプランを組む</h4>
+      <p>ヒアリング内容に基づき、最適な組み合わせを提示。必ず<strong>Before/After（変更前後の比較）</strong>を見せる。</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-left:56px;">
+    <h4 style="margin-bottom:12px;">提案の順序（推奨）</h4>
+    <table class="price-table">
+      <tr><td style="width:30px; text-align:center;">①</td><td><strong>料金プランの最適化</strong>（メインの来店目的に対応）</td></tr>
+      <tr><td style="text-align:center;">②</td><td><strong>ドコモ光</strong>（セット割の効果が大きいため優先度高）</td></tr>
+      <tr><td style="text-align:center;">③</td><td><strong>dカード</strong>（お支払割で即効性のある割引）</td></tr>
+      <tr><td style="text-align:center;">④</td><td><strong>ドコモでんき</strong>（セット割＋ポイント還元）</td></tr>
+      <tr><td style="text-align:center;">⑤</td><td><strong>ドコモ ガス</strong>（でんきとセットで還元率UP）</td></tr>
+      <tr><td style="text-align:center;">⑥</td><td><strong>smartあんしん補償</strong>（端末保護）</td></tr>
+    </table>
+  </div>
+
+  <div class="flow-step">
+    <div class="flow-num">5</div>
+    <div class="flow-content">
+      <h4>🎯 クロージング（3〜5分）</h4>
+      <p>お得な金額を提示し、「本日お手続きいただくと、来月からすぐに適用されます」で背中を押す。<br>
+      迷っている場合は検討材料として見積もりシートを渡し、次回来店を促す。</p>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <strong>⚠️ NG行動リスト</strong><br>
+    ✕ お客様の話を遮って商品説明を始める<br>
+    ✕ 割引額だけ伝えて、サービス内容を説明しない<br>
+    ✕ 他社を悪く言う（「○○は遅いですよ」など）<br>
+    ✕ 全商品を一度に説明して混乱させる（最大3つまでに絞る）
+  </div>
+</div>
+
+<!-- ========== 料金プラン ========== -->
+
+<div class="tab-panel" id="plan">
+  <h2 class="section-title">料金プラン詳細（2026年3月現在）</h2>
+
+  <div class="card card-accent">
+    <h3 style="font-size:16px; font-weight:700; margin-bottom:4px;">ドコモ MAX <span class="badge badge-red">メイン推し</span></h3>
+    <p style="font-size:13px; color:var(--gray-600); margin-bottom:16px;">データ無制限・三段階制。エンタメ特典が充実した主力プラン。</p>
+
+```
+<table class="price-table">
+  <thead>
+    <tr><th>データ量</th><th>基本月額（税込）</th><th>割引フル適用後</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>〜1GB</td>
+      <td>5,698円</td>
+      <td class="highlight">2,398円〜</td>
+    </tr>
+    <tr>
+      <td>1GB〜3GB</td>
+      <td>6,798円</td>
+      <td class="highlight">3,498円〜</td>
+    </tr>
+    <tr>
+      <td>3GB〜無制限</td>
+      <td><span class="price-big">8,448円</span></td>
+      <td><span class="price-big highlight">5,148円〜</span></td>
+    </tr>
+  </tbody>
+</table>
+<p class="small" style="margin-top:8px;">※割引フル適用＝みんなドコモ割(3回線)▲1,210円 + ドコモ光セット割▲1,210円 + でんきセット割▲110円 + dカードお支払割(GOLD/PLATINUM)▲550円 + 長期利用割(20年)▲220円</p>
+
+<h4 style="margin-top:20px; margin-bottom:8px;">🎁 MAX特典一覧</h4>
+<ul class="checklist">
+  <li><strong>選べる特典</strong>：DAZN / NBA docomo / Leminoプレミアム / dアニメストア の4つから<span class="highlight">2サービスまで無料</span></li>
+  <li><strong>Amazonプライム</strong>：月額600円を<span class="highlight">最大6ヶ月間無料</span>（終了後も毎月120ptポイント還元）</li>
+  <li><strong>海外データ通信</strong>：200以上の国・地域で<span class="highlight">30GBまで追加料金なし</span>（最大15日間）</li>
+  <li><strong>上限設定オプション</strong>（無料）：好きなステップでデータ上限を設定可能</li>
+</ul>
+```
+
+  </div>
+
+  <div class="talk-box">
+    <div class="label staff">👔 スタッフ トーク例</div>
+    <p>「お客様、今は3GB超えの月も結構ありますよね。ドコモ MAXなら、<strong>使い放題で8,448円</strong>なんですが、ご家族でドコモをお使いで、ドコモ光もご一緒にされると、<strong>割引だけで3,000円以上お安く</strong>なります。<br><br>
+    しかも、DAZN for docomoが追加料金なしで見放題なんです。DAZNだけで月額4,200円かかるので、<strong>実質的にはかなりお得</strong>になりますよ。」</p>
+    <div class="point">DAZN（月額4,200円）が追加料金なしという訴求は非常に強い。スポーツ好きのお客様には最優先で伝える。</div>
+  </div>
+
+  <div class="card">
+    <h3 style="font-size:16px; font-weight:700; margin-bottom:12px;">ドコモ mini <span class="badge badge-green">小容量向け</span></h3>
+    <table class="price-table">
+      <thead>
+        <tr><th>データ量</th><th>基本月額（税込）</th><th>セット割適用後</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>4GB</td><td>低価格帯</td><td>割引適用でさらにお安く</td></tr>
+        <tr><td>10GB</td><td>中価格帯</td><td>割引適用でさらにお安く</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px; color:var(--gray-600); margin-top:8px;">適用割引：dカードお支払割 / ドコモ光セット割 / home5Gセット割 / ドコモでんきセット割（みんなドコモ割・長期利用割は対象外）</p>
+    <p style="font-size:13px; margin-top:8px;">🎁 Amazonプライム<strong>最大3ヶ月間</strong>割引（MAXは6ヶ月）</p>
+  </div>
+
+  <div class="card">
+    <h3 style="font-size:16px; font-weight:700; margin-bottom:12px;">ドコモ ポイ活 MAX <span class="badge badge-purple">ポイント重視</span></h3>
+    <p style="font-size:14px;">基本料金11,748円（税込）と一見高いが、<strong>dカード決済のポイント還元率が大幅UP</strong>。d払い/dカードを多用する方は実質最安になる可能性あり。</p>
+    <ul class="checklist" style="margin-top:12px;">
+      <li>最大5,000pt/月の追加ポイント獲得可能</li>
+      <li>MAXと同じ特典（選べる特典・Amazon・海外30GB）が付帯</li>
+      <li>マネックス証券のdカード積立もポイ活対象</li>
+    </ul>
+  </div>
+
+  <div class="talk-box">
+    <div class="label staff">👔 プラン診断トーク例</div>
+    <p>「お客様のご利用状況を伺いますと…<br><br>
+    ✅ ギガをたっぷり使われる → <strong>ドコモ MAX</strong>がおすすめ<br>
+    ✅ dカードで毎月しっかりお買い物される → <strong>ポイ活 MAX</strong>で実質最安に<br>
+    ✅ Wi-Fi中心でギガは少なめ → <strong>ドコモ mini</strong>でコストを抑える<br><br>
+    どのタイプに近いですか？」</p>
+  </div>
+</div>
+
+<!-- ========== ドコモ光 ========== -->
+
+<div class="tab-panel" id="hikari">
+  <h2 class="section-title">ドコモ光（光回線）</h2>
+
+  <div class="card card-accent">
+    <h3 style="font-size:16px; font-weight:700; margin-bottom:12px;">ドコモ光 1ギガ 料金表</h3>
+    <table class="price-table">
+      <thead>
+        <tr><th>タイプ</th><th>戸建て（2年定期）</th><th>マンション（2年定期）</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>タイプA</strong><span class="small">OCN等 ← おすすめ</span></td>
+          <td><span class="price-big">5,720円</span></td>
+          <td><span class="price-big">4,400円</span></td>
+        </tr>
+        <tr>
+          <td><strong>タイプB</strong></td>
+          <td>5,940円</td>
+          <td>4,620円</td>
+        </tr>
+        <tr>
+          <td><strong>単独タイプ</strong><span class="small">プロバイダ別途</span></td>
+          <td>5,500円 + α</td>
+          <td>4,180円 + α</td>
+        </tr>
+      </tbody>
+    </table>
+
+```
+<h3 style="font-size:16px; font-weight:700; margin:20px 0 12px;">ドコモ光 10ギガ</h3>
+<table class="price-table">
+  <thead>
+    <tr><th>タイプ</th><th>戸建て・マンション共通（2年定期）</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>タイプA</strong></td>
+      <td><span class="price-big">6,380円</span><span class="small">※一部エリア限定</span></td>
+    </tr>
+  </tbody>
+</table>
+```
+
+  </div>
+
+  <div class="highlight-box">
+    <strong>🔑 最大のセールスポイント：ドコモ光セット割</strong><br>
+    ファミリー割引グループ内の全員のスマホ月額が<strong style="font-size:18px;">毎月▲1,210円（税込）</strong>割引！<br>
+    例：家族3人なら <strong>1,210円 × 3人 = 毎月3,630円もお得</strong>。年間だと<strong style="color:var(--red);">43,560円の節約</strong>！
+  </div>
+
+  <div class="card">
+    <h4 style="margin-bottom:12px;">その他のポイント</h4>
+    <ul class="checklist">
+      <li>新規工事料22,000円が<strong>キャンペーンで無料</strong></li>
+      <li>プロバイダ料込みのシンプル料金体系</li>
+      <li>フレッツ光と同じ回線品質（NTT東西の設備使用）</li>
+      <li>dカード GOLDならドコモ光の料金にも10%ポイント還元</li>
+      <li>解約金：戸建5,500円 / マンション4,180円（更新月は無料）</li>
+    </ul>
+  </div>
+
+  <div class="talk-box">
+    <div class="label staff">👔 スタッフ トーク例</div>
+    <p>「ご自宅のインターネット、今はどちらをお使いですか？<br><br>
+    もしフレッツ光をお使いでしたら、<strong>ドコモ光への転用</strong>が簡単にできて、回線品質はそのまま、工事も不要です。<br><br>
+    しかもご家族全員のスマホ料金が<strong>毎月1,210円ずつ安くなる</strong>ので、ご家族3人なら<strong>年間4万円以上の節約</strong>になりますよ。」</p>
+    <div class="point">「光回線を売る」のではなく「スマホが安くなる方法」として提案する。セット割の金額インパクトが最大の武器。</div>
+  </div>
+
+  <div class="talk-box customer">
+    <div class="label customer-label">🙋 お客様の反論と切り返し</div>
+    <p><strong>「今の光回線に不満はないんですけど…」</strong><br>
+    → 「そうですよね、品質にご不満がないなら尚更です。<strong>品質はそのまま</strong>で、スマホ料金だけ安くなるイメージです。回線の変更ではなく、<strong>請求元がドコモにまとまる</strong>だけなので、速度も変わりませんよ。」</p>
+  </div>
+</div>
+
+<!-- ========== でんき・ガス ========== -->
+
+<div class="tab-panel" id="denki">
+  <h2 class="section-title">ドコモでんき</h2>
+
+  <div class="card card-accent">
+    <h3 style="font-size:16px; font-weight:700; margin-bottom:12px;">ドコモでんき 2プラン比較</h3>
+    <table class="price-table">
+      <thead>
+        <tr><th></th><th>ドコモでんき Basic</th><th>ドコモでんき Green</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>料金</strong></td><td>各地域電力と同額</td><td>各地域電力 <strong>+500円/月</strong></td></tr>
+        <tr><td><strong>dポイント還元率</strong></td><td>最大2%</td><td class="highlight">最大12%〜22%<span class="small">カード種別・エリアにより変動</span></td></tr>
+        <tr><td><strong>dカード GOLD還元</strong></td><td>最大2%</td><td class="highlight">最大10%</td></tr>
+        <tr><td><strong>dカード PLATINUM還元</strong></td><td>最大2%</td><td class="highlight">最大20%</td></tr>
+        <tr><td><strong>スマホセット割</strong></td><td colspan="2">ドコモでんきセット割 ▲110円/月（対象プラン契約者全員）</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px; color:var(--gray-600); margin-top:8px;">※対象プラン：ドコモ MAX / ポイ活 MAX / ポイ活 20 / mini（ahamoは割引対象外）<br>※提供エリア：全国（沖縄県・一部島しょ部除く）</p>
+  </div>
+
+  <h2 class="section-title">ドコモ ガス</h2>
+
+  <div class="card card-accent">
+    <h3 style="font-size:16px; font-weight:700; margin-bottom:12px;">ドコモ ガス 概要（2025年6月〜提供開始）</h3>
+    <table class="price-table">
+      <thead>
+        <tr><th>項目</th><th>内容</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>料金</strong></td><td>東京ガス・大阪ガスの各プランと<strong>同額</strong></td></tr>
+        <tr><td><strong>対応エリア</strong></td><td>東京ガス供給エリア / 大阪ガス供給エリア / 東邦ガス供給エリア</td></tr>
+        <tr><td><strong>ガス単体ポイント還元</strong></td><td>でんき契約なし: 0.5% / でんき契約あり: <span class="highlight">1%</span></td></tr>
+        <tr><td><strong>でんきへの影響</strong></td><td class="highlight">ドコモでんきのポイント還元率が+2%アップ！</td></tr>
+        <tr><td><strong>解約金</strong></td><td>なし（いつでも無料で解約可能）</td></tr>
+        <tr><td><strong>プラン種類</strong></td><td>一般料金プラン、エネファーム向け、床暖房向けなど</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="highlight-box">
+    <strong>📌 でんき×ガス×スマホのトリプル効果</strong><br>
+    ① スマホ：ドコモでんきセット割 ▲110円/月<br>
+    ② 電気代：dポイント還元（Green + dカード GOLD で最大10%〜）<br>
+    ③ ガス追加：電気の還元率がさらに+2%アップ<br>
+    → <strong>料金は変わらず、割引＋ポイントだけ増える</strong>のが最大の訴求ポイント！
+  </div>
+
+  <div class="talk-box">
+    <div class="label staff">👔 スタッフ トーク例（でんき）</div>
+    <p>「ところで、電気はどちらの会社をお使いですか？<br><br>
+    ドコモでんきは、<strong>今お使いの電力会社と基本的に同じ料金</strong>で切り替えられるんです。切り替えるだけで、<strong>スマホ料金が毎月110円安くなって、電気代にdポイントも付く</strong>ようになります。<br><br>
+    dカード GOLDをお持ちなら、ドコモでんきGreenにすると<strong>電気代の最大10%がポイント還元</strong>されますよ。月に1万円の電気代なら、毎月1,000ポイント戻ってくる計算です。」</p>
+  </div>
+
+  <div class="talk-box">
+    <div class="label staff">👔 スタッフ トーク例（ガス）</div>
+    <p>「ドコモでんきをご検討いただけるなら、ガスも一緒にまとめるのがおすすめです。<br><br>
+    ドコモ ガスは<strong>東京ガスさんと全く同じ料金</strong>で、切り替えても金額は変わりません。それなのに、<strong>ガス代にもdポイントが付いて、さらに電気代のポイント還元率が2%上がる</strong>んです。<br><br>
+    解約金もないので、<strong>リスクゼロ</strong>でお得になりますよ。」</p>
+    <div class="point">「料金は同じなのにポイントが付く」「解約金なし」の2つが最強ワード。切り替えのハードルをゼロにする。</div>
+  </div>
+</div>
+
+<!-- ========== dカード ========== -->
+
+<div class="tab-panel" id="dcard">
+  <h2 class="section-title">dカードラインナップ</h2>
+
+  <div class="card card-accent">
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>dカード</th>
+          <th>dカード GOLD U</th>
+          <th>dカード GOLD</th>
+          <th>dカード PLATINUM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>年会費</strong></td>
+          <td class="highlight">無料</td>
+          <td>3,300円<span class="small">条件達成で実質無料</span></td>
+          <td>11,000円</td>
+          <td>29,700円</td>
+        </tr>
+        <tr>
+          <td><strong>基本還元率</strong></td>
+          <td colspan="4" style="text-align:center;">1.0%（100円につき1pt）</td>
+        </tr>
+        <tr>
+          <td><strong>ドコモ料金還元</strong></td>
+          <td>−</td>
+          <td class="highlight">5%</td>
+          <td class="highlight">10%</td>
+          <td class="highlight">最大20%</td>
+        </tr>
+        <tr>
+          <td><strong>dカードお支払割</strong></td>
+          <td>▲220円</td>
+          <td>▲550円</td>
+          <td>▲550円</td>
+          <td>▲550円</td>
+        </tr>
+        <tr>
+          <td><strong>ケータイ補償</strong></td>
+          <td>−</td>
+          <td>最大3万円</td>
+          <td class="highlight">最大12万円</td>
+          <td class="highlight">最大12万円</td>
+        </tr>
+        <tr>
+          <td><strong>海外旅行保険</strong></td>
+          <td>−</td>
+          <td>最大5,000万円</td>
+          <td>最大1億円</td>
+          <td>最大1億円</td>
+        </tr>
+        <tr>
+          <td><strong>年間利用額特典</strong></td>
+          <td>−</td>
+          <td>−</td>
+          <td>100万円以上: 1万円クーポン<br>200万円以上: 2万円クーポン</td>
+          <td>100万円毎に1万円<br><span class="highlight">最大4万円クーポン</span></td>
+        </tr>
+        <tr>
+          <td><strong>家族カード</strong></td>
+          <td>−</td>
+          <td>1,100円/枚</td>
+          <td>1枚目無料<br>2枚目〜1,100円</td>
+          <td>1枚目無料<br>2枚目〜1,100円</td>
+        </tr>
+        <tr>
+          <td><strong>特別特典</strong></td>
+          <td>−</td>
+          <td>22歳以下なら年会費無料</td>
+          <td>空港ラウンジ無料</td>
+          <td>プライオリティ・パス年10回<br>レストラン1名分無料</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="highlight-box">
+    <strong>💡 dカード GOLD の年会費ペイライン</strong><br>
+    年会費11,000円 ÷ 12ヶ月 ＝ 月917円の元を取ればOK<br>
+    → ドコモ料金が月額1万円以上なら、<strong>10%還元（1,000pt/月）だけで年会費超え</strong><br>
+    → さらにdカードお支払割の▲550円/月（年6,600円）を加味すれば、<strong>ドコモ料金5,000円程度でもペイ可能</strong>
+  </div>
+
+  <div class="talk-box">
+    <div class="label staff">👔 dカード GOLD 提案トーク</div>
+    <p>「dカード GOLDをお持ちでないんですね。実は、ドコモのスマホ料金をdカード GOLDでお支払いいただくと、<strong>毎月のお支払い額の10%がdポイントで戻ってくる</strong>んです。<br><br>
+    さらに、<strong>dカードお支払割で毎月550円の割引</strong>もあります。年間にすると6,600円。<br><br>
+    年会費11,000円なんですが、ドコモの月額が8,000円くらいの方なら、<strong>ポイント還元だけで年間9,600pt</strong>。お支払割と合わせると<strong>年間16,200円分</strong>になるので、年会費の元は余裕で取れますよ。」</p>
+    <div class="point">具体的な数字で「年会費 vs 特典」を見せると納得感が高い。お客様の月額料金に合わせてその場で計算してあげる。</div>
+  </div>
+
+  <div class="talk-box customer">
+    <div class="label customer-label">🙋 お客様の反論と切り返し</div>
+    <p><strong>「年会費がかかるのはちょっと…」</strong><br>
+    → 「年会費は11,000円ですが、今お使いのドコモ料金○○円から計算すると、ポイント還元だけで年間○○ポイント貯まります。<strong>実質プラスになる</strong>方がほとんどなんですよ。<br><br>
+    もし不安でしたら、まずは<strong>年会費無料のdカード</strong>でお支払割の220円割引だけでも始めてみませんか？」</p>
+  </div>
+</div>
+
+<!-- ========== 補償・保険 ========== -->
+
+<div class="tab-panel" id="hoken">
+  <h2 class="section-title">smartあんしん補償</h2>
+
+  <div class="card card-accent">
+    <h3 style="font-size:16px; font-weight:700; margin-bottom:12px;">補償内容（4つの柱）</h3>
+    <div class="grid-2">
+      <div style="background:var(--red-light); border-radius:8px; padding:16px;">
+        <h4 style="color:var(--red); font-size:14px;">①故障・紛失の交換</h4>
+        <p style="font-size:13px;">故障・水濡れ・盗難・紛失時にリフレッシュ品を最短当日〜2日以内にお届け。年2回まで利用可能。</p>
+      </div>
+      <div style="background:var(--blue-light); border-radius:8px; padding:16px;">
+        <h4 style="color:var(--blue); font-size:14px;">②イエナカ機器補償</h4>
+        <p style="font-size:13px;">自宅のPC・タブレット・ゲーム機などが故障した場合の修理・交換を補償（最大7万円）。</p>
+      </div>
+      <div style="background:var(--green-light); border-radius:8px; padding:16px;">
+        <h4 style="color:var(--green); font-size:14px;">③スマホ不正決済補償</h4>
+        <p style="font-size:13px;">スマホを通じた不正決済の被害を最大100万円まで補償（東京海上日動引受）。</p>
+      </div>
+      <div style="background:var(--purple-light); border-radius:8px; padding:16px;">
+        <h4 style="color:var(--purple); font-size:14px;">④携行品補償mini（無料特典）</h4>
+        <p style="font-size:13px;">外出先で持ち物が破損・盗難にあった場合、最大1万円を補償（免責3,000円）。</p>
+      </div>
+    </div>
+
+```
+<h4 style="margin-top:20px; margin-bottom:8px;">月額料金</h4>
+<table class="price-table">
+  <thead><tr><th>機種例</th><th>月額（税込）</th></tr></thead>
+  <tbody>
+    <tr><td>iPhone 17 Pro Max 等（ハイエンド）</td><td>1,100円</td></tr>
+    <tr><td>iPhone 17e / Galaxy S26 等（ミドルハイ）</td><td>825円〜880円</td></tr>
+    <tr><td>エントリー機種</td><td>330円〜550円</td></tr>
+  </tbody>
+</table>
+<p style="font-size:12px; color:var(--gray-600); margin-top:8px;">※機種購入日から14日以内に申込みが必要</p>
+```
+
+  </div>
+
+  <div class="talk-box">
+    <div class="label staff">👔 スタッフ トーク例</div>
+    <p>「新しいスマホ、大切に使いたいですよね。もし画面が割れたり、水に濡れてしまったりした場合、<strong>修理代は数万円かかる</strong>ことがあります。<br><br>
+    smartあんしん補償なら、<strong>月額○○円で、もしものとき交換品をすぐにお届け</strong>します。<br><br>
+    しかもスマホだけじゃなくて、<strong>ご自宅のパソコンやゲーム機の故障</strong>、<strong>スマホの不正決済</strong>まで補償されるので、ご家族全体の安心につながりますよ。」</p>
+    <div class="point">「スマホが壊れたらいくらかかるか？」を具体的に伝えてからの加入提案が効果的。iPhone画面修理は5万円以上になることも。</div>
+  </div>
+
+  <div class="card">
+    <h3 style="font-size:16px; font-weight:700; margin-bottom:12px;">dカード付帯の保険特典</h3>
+    <table class="price-table">
+      <thead><tr><th>保険種類</th><th>dカード GOLD</th><th>dカード PLATINUM</th></tr></thead>
+      <tbody>
+        <tr><td>海外旅行保険</td><td>最大1億円</td><td>最大1億円</td></tr>
+        <tr><td>国内旅行保険</td><td>最大5,000万円（利用付帯）</td><td>最大1億円</td></tr>
+        <tr><td>ショッピング保険</td><td>年間300万円</td><td>年間500万円</td></tr>
+        <tr><td>dカードケータイ補償</td><td>最大12万円（3年間）</td><td>最大12万円（3年間）</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ========== ロープレ台本 ========== -->
+
+<div class="tab-panel" id="roleplay">
+  <h2 class="section-title">ロープレ台本集</h2>
+  <p style="font-size:14px; color:var(--gray-600); margin-bottom:20px;">研修でそのまま使えるロールプレイ台本です。スタッフ役とお客様役に分かれて練習してください。</p>
+
+  <!-- シナリオ1 -->
+
+  <div class="roleplay">
+    <h4>🎬 シナリオ①：機種変更で来店した30代ファミリー</h4>
+    <div class="scenario">
+      <strong>お客様設定：</strong>35歳男性。妻と子ども1人の3人家族。全員ドコモ。旧プランeximoを使用中。<br>
+      自宅ネットはフレッツ光。dカードは持っていない。電気は東京電力。<br>
+      <strong>来店目的：</strong>iPhone機種変更
+    </div>
+  </div>
+
+  <div class="talk-box customer">
+    <div class="label customer-label">🙋 お客様</div>
+    <p>「すみません、iPhoneの機種変更をしたいんですけど」</p>
+  </div>
+  <div class="arrow-down">↓</div>
+  <div class="talk-box">
+    <div class="label staff">👔 スタッフ</div>
+    <p>「ありがとうございます！機種変更ですね。ちなみに今お使いのiPhoneはどのモデルですか？」</p>
+  </div>
+  <div class="arrow-down">↓</div>
+  <div class="talk-box customer">
+    <div class="label customer-label">🙋 お客様</div>
+    <p>「iPhone 14です。2年くらい使ってるので、そろそろ新しくしたいなと」</p>
+  </div>
+  <div class="arrow-down">↓</div>
+  <div class="talk-box">
+    <div class="label staff">👔 スタッフ</div>
+    <p>「2年お使いなんですね！ちょうど良いタイミングです。新しい機種を見ていただく前に、少しだけ今のご利用状況を確認させてください。<br><br>
+    今の料金プランはお分かりですか？毎月おいくらくらいお支払いですか？」</p>
+  </div>
+  <div class="arrow-down">↓</div>
+  <div class="talk-box customer">
+    <div class="label customer-label">🙋 お客様</div>
+    <p>「えーっと、8,000円くらいだったかな…。eximoだと思います」</p>
+  </div>
+  <div class="arrow-down">↓</div>
+  <div class="talk-box">
+    <div class="label staff">👔 スタッフ</div>
+    <p>「ありがとうございます。eximoですね。実は今年から新しいプランが出ていまして、<strong>eximoと同じデータ無制限でも特典がかなり充実</strong>しているんです。<br><br>
+    ちなみに、ご家族もドコモをお使いですか？」</p>
+  </div>
+  <div class="arrow-down">↓</div>
+  <div class="talk-box customer">
+    <div class="label customer-label">🙋 お客様</div>
+    <p>「はい、妻と子どもも3人ともドコモです」</p>
+  </div>
+  <div class="arrow-down">↓</div>
+  <div class="talk-box">
+    <div class="label staff">👔 スタッフ</div>
+    <p>「素晴らしいですね！3人でドコモなら、<strong>みんなドコモ割で毎月1,210円の割引</strong>が受けられます。<br><br>
+    それと、ご自宅のインターネットはどちらをお使いですか？」</p>
+  </div>
+  <div class="arrow-down">↓</div>
+  <div class="talk-box customer">
+    <div class="label customer-label">🙋 お客様</div>
+    <p>「フレッツ光です」</p>
+  </div>
+  <div class="arrow-down">↓</div>
+  <div class="talk-box">
+    <div class="label staff">👔 スタッフ</div>
+    <p>「フレッツ光をお使いなんですね！それでしたら、<strong>ドコモ光に転用</strong>していただくと、回線品質はそのままで、ご家族3人全員のスマホ料金から<strong>毎月1,210円ずつ、合計3,630円が割引</strong>になります。<br><br>
+    つまり、プラン変更と光をまとめるだけで…</p>
+    <div style="background:#fff; border-radius:8px; padding:14px; margin-top:12px; border:2px solid var(--red);">
+      <strong style="color:var(--red);">月額削減のイメージ：</strong><br>
+      みんなドコモ割：▲1,210円 × 3人 = ▲3,630円<br>
+      ドコモ光セット割：▲1,210円 × 3人 = ▲3,630円<br>
+      合計：<span style="font-size:20px; font-weight:900; color:var(--red);">毎月7,260円、年間87,120円のお得！</span>
+    </div>
+    <p style="margin-top:12px;">さらに、dカード GOLDでお支払いいただくと、<strong>さらに550円/月の割引＋ドコモ料金の10%ポイント還元</strong>も付きますよ。」</p>
+  </div>
+  <div class="arrow-down">↓</div>
+  <div class="talk-box customer">
+    <div class="label customer-label">🙋 お客様</div>
+    <p>「そんなに安くなるんですか！？ちょっと考えますね…」</p>
+  </div>
+  <div class="arrow-down">↓</div>
+  <div class="talk-box">
+    <div class="label staff">👔 スタッフ</div>
+    <p>「もちろんです！ただ、本日お手続きいただければ<strong>来月から適用</strong>になりますし、ドコモ光の<strong>新規工事料も無料キャンペーン中</strong>です。<br><br>
+    機種変更のお手続きと合わせてできますので、お時間的にもお手間にはなりませんよ。」</p>
+    <div class="point">「今日やるメリット」と「手間がかからない」の2点で背中を押す。強引にならないよう、あくまで情報提供のスタンスで。</div>
+  </div>
+
+  <hr style="margin:40px 0; border:none; border-top:2px dashed var(--gray-200);">
+
+  <!-- シナリオ2 -->
+
+  <div class="roleplay">
+    <h4>🎬 シナリオ②：料金が高いと感じている60代シニア</h4>
+    <div class="scenario">
+      <strong>お客様設定：</strong>65歳女性。一人暮らし。ドコモ歴20年以上。月のデータ利用は2GB程度。<br>
+      旧プランのままで月8,000円以上払っている。ネットは自宅にWi-Fiあり。<br>
+      <strong>来店目的：</strong>「料金が高い気がするので見直したい」
+    </div>
+  </div>
+
+  <div class="talk-box customer">
+    <div class="label customer-label">🙋 お客様</div>
+    <p>「毎月の料金が高い気がして…。見直したいんですけど」</p>
+  </div>
+  <div class="arrow-down">↓</div>
+  <div class="talk-box">
+    <div class="label staff">👔 スタッフ</div>
+    <p>「ご来店ありがとうございます。料金の見直し、大事ですよね。まず今のプランとご利用状況を確認させてください。<br><br>
+    …（確認後）…<br><br>
+    なるほど、毎月2GBくらいしかお使いでないんですね。今のプランだと無制限の料金がかかっていますので、<strong>ドコモ miniの4GBプラン</strong>に変更されるだけで、<strong>月額が大幅に下がります</strong>よ。</p>
+  </div>
+  <div class="arrow-down">↓</div>
+  <div class="talk-box">
+    <div class="label staff">👔 スタッフ</div>
+    <p>「それと、ドコモを20年以上お使いとのことですので…もしドコモ MAXをお選びの場合は<strong>長期利用割で毎月220円の割引</strong>もあります。<br><br>
+    ただ、2GBくらいのご利用でしたら、<strong>ドコモ miniの方が断然お得</strong>です。<br><br>
+    あと、お支払い方法はどうされていますか？<strong>dカードでお支払い</strong>いただくだけで、さらに毎月220円安くなるんですよ。年会費も無料のカードがありますので。」</p>
+    <div class="point">シニアのお客様には「安くなる」だけでなく「今まで損していた」と感じさせないよう配慮。「良いプランが出たんですよ」というポジティブな伝え方を。</div>
+  </div>
+
+  <hr style="margin:40px 0; border:none; border-top:2px dashed var(--gray-200);">
+
+  <!-- シナリオ3 -->
+
+  <div class="roleplay">
+    <h4>🎬 シナリオ③：他社から乗り換え検討中の20代</h4>
+    <div class="scenario">
+      <strong>お客様設定：</strong>25歳男性。現在au使用。月20GB以上使う。DAZNに興味あり。<br>
+      一人暮らし。dカード保有なし。電気は地域電力そのまま。<br>
+      <strong>来店目的：</strong>「ドコモに乗り換えを検討中」
+    </div>
+  </div>
+
+  <div class="talk-box customer">
+    <div class="label customer-label">🙋 お客様</div>
+    <p>「auからドコモに乗り換えようかなと思って来たんですけど」</p>
+  </div>
+  <div class="arrow-down">↓</div>
+  <div class="talk-box">
+    <div class="label staff">👔 スタッフ</div>
+    <p>「ありがとうございます！ドコモにご興味を持っていただいて嬉しいです。乗り換えをご検討の理由は何かありますか？」</p>
+  </div>
+  <div class="arrow-down">↓</div>
+  <div class="talk-box customer">
+    <div class="label customer-label">🙋 お客様</div>
+    <p>「DAZNが無料で見られるって聞いて。サッカーが好きなんです」</p>
+  </div>
+  <div class="arrow-down">↓</div>
+  <div class="talk-box">
+    <div class="label staff">👔 スタッフ</div>
+    <p>「サッカーお好きなんですね！それなら<strong>ドコモ MAX</strong>がぴったりです。<br><br>
+    DAZNは通常月額4,200円かかるんですが、ドコモ MAXなら<strong>追加料金なしで見放題</strong>です。しかも今は<strong>「選べる特典」で、DAZN以外にもNBA docomo、Leminoプレミアム、dアニメストアから2つまで無料</strong>で使えます。<br><br>
+    20GB以上お使いということは、ドコモ MAXの無制限がちょうどいいですね。<strong>月額8,448円で、DAZN代の4,200円が浮く</strong>ので、実質的にはかなりお安いです。<br><br>
+    さらに、<strong>dカード GOLD Uなら年会費3,300円で、25歳以下は条件達成で実質無料</strong>にもできますし、お支払割で毎月550円安くなりますよ。」</p>
+    <div class="point">乗り換え客にはまず「来た理由（DAZN）」を全力で肯定し、そこから広げていく。年齢が若いならGOLD Uを優先提案。</div>
+  </div>
+
+  <hr style="margin:40px 0; border:none; border-top:2px dashed var(--gray-200);">
+
+  <div class="card" style="background:var(--gray-100);">
+    <h3 style="font-size:16px; font-weight:700; margin-bottom:12px;">📝 ロープレ振り返りチェックリスト</h3>
+    <ul class="checklist">
+      <li>ヒアリングの5項目（プラン・データ量・家族・ネット・支払方法）を確認できたか？</li>
+      <li>お客様の話を遮らず、共感しながらヒアリングできたか？</li>
+      <li>提案は3つ以内に絞れたか？（情報過多になっていないか）</li>
+      <li>割引額やポイント還元を<strong>具体的な数字</strong>で伝えられたか？</li>
+      <li>Before/After（変更前後の比較）を見せられたか？</li>
+      <li>お客様の反論に対して、押し売り感なく切り返せたか？</li>
+      <li>「今日やるメリット」を自然に伝えられたか？</li>
+      <li>次のアクション（手続き or 次回来店）を明確にできたか？</li>
+    </ul>
+  </div>
+</div>
+
+</div><!-- /content -->
+
+<script>
+// Tab switching
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+
+</body>
+</html>
